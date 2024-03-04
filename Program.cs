@@ -28,6 +28,14 @@ else
     app.UseHsts();
 }
 
+// activate CORS
+
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
